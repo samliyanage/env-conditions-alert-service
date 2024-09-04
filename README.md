@@ -17,6 +17,7 @@ Start RabbitMQ using Docker with the following command:
 
 ```sh
 docker run -d --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3-management
+```
 
 ## Building and Running Services
 
@@ -25,24 +26,26 @@ docker run -d --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3-management
 
 ```sh
 ./gradlew build
+```
 
 2) Start the service using:
 
 ```sh
 ./gradlew bootRun
-
+```
 
 ## Central Monitoring Service
 1) Navigate to the Central Monitoring Service Directory and build the application
 
 ```sh
 ./gradlew build
+```
 
 2) Start the service using:
 
 ```sh
 ./gradlew bootRun
-
+```
 
 ## Simulating Sensor Data
 
@@ -54,7 +57,7 @@ Simulate Temperature Sensor Data
 
 ```sh
 echo "sensor_id=t1; value=30" | nc -u -w1 localhost 3344
-
+```
 
 ## Simulate Humidity Sensor Data
 
@@ -63,6 +66,7 @@ Open a New Terminal
 
 ```sh
 echo "sensor_id=h1; value=40" | nc -u -w1 localhost 3355
+```
 
 ## Verifying the Services
 
@@ -77,5 +81,6 @@ Example Alert messages
 ```
 2024-09-04T19:47:59.396+08:00 ERROR 22669 --- [central-monitoring-service] [ntContainer#0-1] com.cms.service.SensorService            : ALARM: Temperature exceeded threshold. Value: 60
 2024-09-04T19:48:31.625+08:00 ERROR 22669 --- [central-monitoring-service] [ntContainer#0-1] com.cms.service.SensorService            : ALARM: Humidity exceeded threshold. Value: 74
+```
 
 
