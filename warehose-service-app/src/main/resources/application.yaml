@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: wh-service-app
+
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+    template:
+      exchange: sensors
+
+sensors:
+  temperature:
+    port: 3344
+  humidity:
+    port: 3355
