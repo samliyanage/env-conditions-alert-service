@@ -5,6 +5,15 @@ This project consists of two Spring Boot applications:
 - **Warehouse Service**: Collects data from various sensors and sends it to a central monitoring service.
 - **Central Monitoring Service**: Monitors sensor data, checks against configured thresholds, and triggers alarms if thresholds are exceeded.
 
+## Used Technologies
+
+- **Kotlin 1.9.25**: run with JDK 21.
+- **Spring Boot 3.3.3**
+- **Spring 6.x**
+- **Mockk **: For test coverage.
+- **RabbitMQ**
+- **Gradle**
+
 ## Prerequisites
 
 - **Java 21**: Ensure JDK 21 installed.
